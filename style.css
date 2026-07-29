@@ -316,6 +316,7 @@ a {
 
 .hero h1,
 .concept h2,
+.record h2,
 .experiences h2,
 .manifesto h2,
 .information h2,
@@ -334,6 +335,7 @@ a {
 
 .hero h1 em,
 .concept h2 em,
+.record h2 em,
 .experiences h2 em,
 .manifesto h2 em,
 .information h2 em,
@@ -631,6 +633,60 @@ a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.83rem;
   line-height: 1.65;
+}
+
+.record {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+  border-top: 1px solid rgba(224, 189, 132, 0.2);
+  border-bottom: 1px solid rgba(224, 189, 132, 0.2);
+  background: var(--forest-900);
+  color: #fff;
+}
+
+.record__media {
+  margin: 0;
+  background: #091a11;
+}
+
+.record__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.record__media figcaption {
+  border-top: 1px solid rgba(224, 189, 132, 0.14);
+  padding: 16px clamp(22px, 4vw, 52px);
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.record__content {
+  display: grid;
+  min-height: 520px;
+  align-content: center;
+  border-left: 1px solid rgba(224, 189, 132, 0.24);
+  padding: clamp(72px, 8vw, 130px) clamp(38px, 7vw, 104px);
+}
+
+.record h2 {
+  max-width: 620px;
+  font-size: clamp(3.2rem, 4.8vw, 5.8rem);
+  line-height: 0.94;
+}
+
+.record__content > p:last-child {
+  max-width: 470px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.59);
+  line-height: 1.75;
 }
 
 .manifesto {
@@ -986,6 +1042,21 @@ a {
 
   .experience-card {
     min-height: 330px;
+  }
+
+  .record {
+    grid-template-columns: 1fr;
+  }
+
+  .record__content {
+    min-height: 0;
+    border-top: 1px solid rgba(224, 189, 132, 0.24);
+    border-left: 0;
+    padding: 78px 22px 84px;
+  }
+
+  .record h2 {
+    font-size: clamp(3.05rem, 14vw, 4.8rem);
   }
 
   .manifesto {
